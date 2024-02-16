@@ -60,28 +60,33 @@ class BaseLLM(ExtendedBaseTool):
         raise NotImplementedError("BaseLLM does not support sync")
 
     async def _arun(
-        self,
-        *args: Any,
-        run_manager: Optional[AsyncCallbackManagerForToolRun] = None,
-        **kwargs: Any,
-    ) -> str:
-        """Use the tool asynchronously."""
-        query = kwargs.get(
-            "query",
-            args[0],
-        )
-        # Only use the latest human message
-        query = ToolInputSchema.parse_raw(query).latest_human_message
+            self,
+            *args: Any,
+            run_manager: Optional[AsyncCallbackManagerForToolRun] = None,
+            **kwargs: Any,
+        ) -> str:
+            """Use the tool asynchronously."""
+            try:
+                query = kwargs.get(
+                    "query",
+                    args[0],
+                )
+                tool_input = ToolInputSchema.parse_raw(query)
+                user_question = tool_input.latest_human_message
 
-        try:
-            messages = [
-                SystemMessage(content=self.system_context),
-                HumanMessage(content=self.prompt_message.format(question=query)),
-            ]
-            response = await self._agenerate_response(messages, discard_fast_llm=True, run_manager=run_manager)
-            return response
-        except Exception as e:
-            if run_manager is not None:
-                await run_manager.on_tool_error(e, tool=self.name)
-                return repr(e)
-            raise e
+                data = tool_input.intermediate_steps["sql_tool"]
+
+                messages = [
+                    SystemMessage(content=self.system_context),
+                    HumanMessage(content=self.prompt_message.format(question=user_question, retrieved_data=data))
+                ]
+                response = await self._agenerate_response(messages, discard_fast_llm=True, run_manager=run_manager)
+
+                logger.info(f"Expert Tool response - {response}")
+
+                return response
+            except Exception as e:
+                if run_manager is not None:
+                    await run_manager.on_tool_error(e, tool=self.name)
+                    return repr(e)
+                raise e

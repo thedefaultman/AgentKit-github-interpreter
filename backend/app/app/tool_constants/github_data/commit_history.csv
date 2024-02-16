@@ -1,0 +1,24 @@
+commit_hash,commit_timestamp,commit_user,commit_message,file_changed
+fddf730f30c0dea509c2fcce446c3aaf5549c388,2024-02-14T09:34:58-08:00,JediMonkeyDan,Update README.md, README.md
+" ""c83092ab706fb1752a4390a3ef3c49b4d9d31511""",2024-02-14T09:32:26-08:00,JediMonkeyDan,Update README.md,
+8e5af9399f0c2f717d0f17f62502c335abf75f31,2024-02-12T11:34:44-08:00,JediMonkeydan,fix: fixed scene in template, .github/workflows/main.yaml
+" ""ca39bc40b4afe4340acd49b212d8b45f7492bace""",2024-02-12T11:10:44-08:00,JediMonkeydan,added scene to the Unity Template,
+" ""941338f85157855bbdbc7e09e3ccf383358618b4""",2024-02-01T10:01:18-08:00,JediMonkeyDan,pushing the working ci to the template,
+66d9187118d1201dbff2e6abd8d209097c7aa094,2024-01-11T11:36:09-08:00,jedimonkeydan,add personal token for the post request, .github/workflows/build.yaml
+" ""5a9ed8c99f63734bc5c3ed394a1f2ff04a9b37bf""",2024-01-10T14:58:34-08:00,Patrick Gates,Update Project ID Fetching,
+85c4fdd428390a923bb2c86ecb2e131720cb0142,2024-01-10T14:48:08-08:00,Patrick Gates,Run on Self Hosted while Testing, .github/workflows/build.yaml
+" ""c292ce3dcf6e5e34b3abc905dfc0d27da4b5e983""",2023-11-06T13:43:38-08:00,JediMonkeyDan,Set up CI with Azure Pipelines,
+7bdabfab0c8f9e090be4071851a313ecd0cedd5f,2023-11-06T09:55:56-08:00,JediMonkeydan,add comment, .github/workflows/build.yaml
+" ""0ce3243bcb6e6d31046cc0064771c4a42e0ed241""",2023-10-25T10:47:10-07:00,JediMonkeydan,secrets added,
+f9bb3a738f9effc6c25eb153237197a3e8ed7b6c,2023-10-25T10:17:05-07:00,JediMonkeydan,fixing json syntax error. Kill me now, .github/workflows/build.yaml
+" ""f328df3e57a9ce07bd8ef0491c1544a96b60a396""",2023-10-25T09:47:18-07:00,JediMonkeydan,setting a fallback value incase git remote url NA,
+11de1a58df8698c7c3a99d9fa39d0085ca79fce4,2023-10-25T09:40:01-07:00,JediMonkeydan,adding var for the project name. This will grab the rep name as input, .github/workflows/build.yaml
+" ""f2e2fd4b081b2f68d943296720bdb294c504d1f2""",2023-10-25T09:24:13-07:00,JediMonkeydan,fix syntax error in build.yaml,
+fee52c253c609c4d6cd056243ff8b42c80ba8589,2023-10-24T15:53:48-07:00,JediMonkeydan,update secrets in the check job to action secrets, .github/workflows/build.yaml
+" ""739f75290c975952792bbcd1b4da450388d4d371""",2023-10-24T15:49:11-07:00,JediMonkeydan,Merge branch 'main' of https://github.com/JediMonkeyDan/Unity-Template,
+a9ae36177d9612eabc56d6ccd01bed8f1354dfae,2023-10-24T15:46:33-07:00,JediMonkeydan,add Check UNITY_CLOUD_BUILD_PROJECT_ID job to the build.yaml file, .github/workflows/build.yaml
+" ""20878dd1c185747993089e75c4b3b929e4cc4e23""",2023-10-24T11:17:04-07:00,JediMonkeyDan,Update README.md,
+9b2a5331bbc34a610a5339a1743ba0242238299f,2023-10-24T11:10:55-07:00,JediMonkeyDan,Update README.md, README.md
+" ""d24e677af9f8ea6d96ec677ccf77610fb47920e2""",2023-10-24T11:08:26-07:00,JediMonkeydan,add readme.md,
+2f36fd3e4fc3d29026aa2e182ff0569563b696f2,2023-10-24T10:13:52-07:00,JediMonkeydan,add .github/workflows and build.yaml, .github/workflows/build.yaml
+" ""3ad341ef268c4bd27d76e3965e48abcaea6b57dd""",2023-10-24T09:35:59-07:00,JediMonkeydan,add unity packages and imports,
